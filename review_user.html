@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Review</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css"
+        rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1549984893" />
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/review.css">
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+		<div class="col-12 col-md-2"></div>
+		<a class="navbar-brand text-success col-6 col-md-3 h1 " style="align-items: flex-start" href="index_user.html"><img src="img/takeabite.png"
+				style="width: 80px; height: 50px; margin-right: 5px;"><b>Take-A-Bite</b></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+		<form class="form-inline my-2 my-lg-0 col-6 col-md-4">
+			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		</form>
+        <ul class="navbar-nav mr-2 col-6 col-md-3">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle border border-success rounded bg-white text-success" href="#"
+                    id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <b>ПРОФИЛ</b>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a href="add_review.html" class="dropdown-item">Добави ревю</a>
+                    <a href="my_reviews.html" class="dropdown-item">Моите ревюта</a>
+                    <a href="favourites.html" class="dropdown-item">Любими</a>
+                    <a href="index.html" class="dropdown-item">Изход</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-6">
+                <h1>Име на ястие</h1>
+                <h2>Име на ресторант</h2>
+            </div>
+            <div class="col-6 mt-2 float-left">
+                <div class="row">
+                    <h5 style="display: inline"><label for="rate"><b>Оценка на ястие:</label>&nbsp;4.5 /
+                        5.0&nbsp;</b><span class="fa fa-star checked" style="color: orange;"></span></h5>
+                </div>
+                <div class="form-group row">
+                    <div class="mt-3">
+                        <label for="rate"><b>Оцени на ястие:&nbsp;</b></label>
+                    </div>
+                    <div class="rate" name="rate">
+                        <input type="radio" id="star5" name="rate" value="5" />
+                        <label for="star5" title="excellent">5 stars</label>
+                        <input type="radio" id="star4" name="rate" value="4" />
+                        <label for="star4" title="tasty">4 stars</label>
+                        <input type="radio" id="star3" name="rate" value="3" />
+                        <label for="star3" title="good">3 stars</label>
+                        <input type="radio" id="star2" name="rate" value="2" />
+                        <label for="star2" title="meh">2 stars</label>
+                        <input type="radio" id="star1" name="rate" value="1" />
+                        <label for="star1" title="bad">1 star</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12" style="padding: 0;">
+            <img class="rounded img-fluid" src="img/meal_wide.jpg" alt="Picture Here"
+                style="width: 100%; height: auto;">
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <br>
+                <h3>Ревю:</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar neque quis ante
+                    pellentesque, in tincidunt ante ullamcorper. Duis sit amet ipsum mattis, facilisis purus sit amet,
+                    vulputate massa. Donec facilisis est vitae diam iaculis cursus. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Fusce orci tellus, dictum in sagittis eu, pharetra et tortor. Fusce in
+                    nisl mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    Suspendisse ac mi vitae ex mollis congue. Praesent turpis felis, mollis ut massa non, tempor laoreet
+                    augue. Morbi pretium libero eget felis malesuada, id faucibus lacus hendrerit. Duis augue lacus,
+                    bibendum eu varius et, pellentesque sed ipsum. Mauris lacinia ultrices nisl eget vulputate.
+                    Phasellus erat odio, sollicitudin sed eleifend ac, rutrum in lectus. Suspendisse potenti. Curabitur
+                    eu lectus non sem ultrices ullamcorper.
+                </p>
+            </div>
+            <div class="col-6">
+                <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places"></script>
+                <div id="map"></div>
+                <div id="panel"></div>
+
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-success">Добави към любими &nbsp;<span class="fa fa-star checked" style="color: orange;"></span></button>
+        </div>
+        <div class="mt-2 col-12 form-group">
+            <label for="review"><b>Напиши коментар:</b></label>
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+            <div class="row">
+                <button type="button" class="mt-2 btn btn-success">Добави коментар</button>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>Коментари:</h3>
+                </div><!-- /col-sm-12 -->
+            </div><!-- /row -->
+            <div class="row mt-2">
+                <div class="col-sm-1">
+                    <div class="thumbnail">
+                        <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                    </div><!-- /thumbnail -->
+                </div><!-- /col-sm-1 -->
+
+                <div class="col-sm-11">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
+                        </div>
+                        <div class="panel-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra sapien leo, iaculis
+                            porta est lobortis sit amet. Curabitur ut tortor tempus, rutrum nibh ut, malesuada tellus.
+                            In
+                            laoreet arcu erat, non imperdiet turpis suscipit sit amet.
+                        </div><!-- /panel-body -->
+                    </div><!-- /panel panel-default -->
+                </div><!-- /col-sm-5 -->
+            </div>
+            <div class="row mt-2">
+                <div class="col-sm-1">
+                    <div class="thumbnail">
+                        <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                    </div><!-- /thumbnail -->
+                </div><!-- /col-sm-1 -->
+
+                <div class="col-sm-11">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
+                        </div>
+                        <div class="panel-body">
+                            Suspendisse potenti. Aenean venenatis consequat luctus. Vestibulum quis augue gravida massa
+                            vestibulum lobortis vel sed sapien. Nullam lobortis elit porttitor vestibulum scelerisque.
+                            Duis
+                            eget mollis nunc, eu tempor ligula. Aliquam erat volutpat.
+                        </div><!-- /panel-body -->
+                    </div><!-- /panel panel-default -->
+                </div><!-- /col-sm-5 -->
+            </div><!-- /row -->
+        </div>
+    </div>
+    <footer class="footer pt-4 mt-4">
+        <hr class="border-success">
+        <!-- Footer Links -->
+        <div class="footer-bg">
+            <div class="container text-center text-md-left">
+            </div>
+        </div>
+        <hr class="border-success">
+        <ul class="list-unstyled list-inline text-center py-2">
+        </ul>
+        <hr class="border-success">
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        </div>
+    </footer>
+    <script src="scripts/show_loc.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

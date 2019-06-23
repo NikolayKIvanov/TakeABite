@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+		<div class="col-12 col-md-2"></div>
+		<a class="navbar-brand text-success col-6 col-md-3 h1 " style="align-items: flex-start" href="index_user.html"><img src="img/takeabite.png"
+				style="width: 80px; height: 50px; margin-right: 5px;"><b>Take-A-Bite</b></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+		<form class="form-inline my-2 my-lg-0 col-6 col-md-4">
+			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		</form>
+        <ul class="navbar-nav mr-2 col-6 col-md-3">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle border border-success rounded bg-white text-success" href="#"
+                    id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <b>ПРОФИЛ</b>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a href="add_review.html" class="dropdown-item">Добави ревю</a>
+                    <a href="my_reviews.html" class="dropdown-item">Моите ревюта</a>
+                    <a href="favourites.html" class="dropdown-item">Любими</a>
+                    <a href="index.html" class="dropdown-item">Изход</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+            <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">Начало</li>
+                    </ol>
+                </nav>
+        <div class="btn-group">
+            <button type="button" class="btn btn-light col-3">Филтър</button>
+            <button type="button" class="btn btn-light col-8">Карта</button>
+            <div class="nav-item dropdown col-5">
+                <a class="nav-link dropdown-toggle btn-light" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <b>Сортирай по:</b>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Популярни</a>
+                    <a class="dropdown-item" href="#">Цена</a>
+                    <!-- <div class="dropdown-divider"></div> -->
+                    <a class="dropdown-item" href="#">Категория</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="sidemenu">
+                    <div class="btn-group-vertical mt-2">
+                        <!-- <h5 class="mt-2">Сортирай по:</h5>
+                                <div class="btn-group-vertical">
+                                    <button type="button" class="btn btn-light btn-outline-success">Популярни</button>
+                                    <button type="button" class="btn btn-light btn-outline-success">Цена-възходящ ред</button>
+                                    <button type="button" class="btn btn-light btn-outline-success">Цена-възходящ ред</button>
+                                    <button type="button" class="btn btn-light btn-outline-success">Цена-възходящ ред</button>
+                                    <button type="button" class="btn btn-light btn-outline-success">Цена-възходящ ред</button>
+                                </div>                -->
+                        <!-- <h5 class="mt-2">Категория</h5> -->
+                        <button type="button" class="btn btn-warning rounded mt-4">Категория</button>
+                        <div class="scrollable-menu">
+                            <div class="btn-group-vertical">
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="cat1">
+                                        <label class="form-check-label" for="cat1">Бързо хранене</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="cat2">
+                                        <label class="form-check-label" for="cat2">Веган</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="cat3">
+                                        <label class="form-check-label" for="cat3">Вечеря</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="cat4">
+                                        <label class="form-check-label" for="cat4">Закуска</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="cat5">
+                                        <label class="form-check-label" for="cat5">Кафене</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="cat6">
+                                        <label class="form-check-label" for="cat6">Обяд</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="cat7">
+                                        <label class="form-check-label" for="cat7">Сладкарница</label>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- <h5 class="mt-2">Кухня</h5> -->
+                        <button type="button" class="btn btn-warning rounded mt-4">Кухня</button>
+                        <div class="scrollable-menu">
+                            <div class="btn-group-vertical ">
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="cu1">
+                                        <label class="form-check-label" for="cu1">Барбекю</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="cu2">
+                                        <label class="form-check-label" for="cu2">Българска</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="cu3">
+                                        <label class="form-check-label" for="cu3">Бързо хранене</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="cu4">
+                                        <label class="form-check-label" for="cu4">Вегетарианска</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="cu5">
+                                        <label class="form-check-label" for="cu5">Индийска</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="cu6">
+                                        <label class="form-check-label" for="cu6">Интернационална</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="cu7">
+                                        <label class="form-check-label" for="cu7">Италианска</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="cu8">
+                                        <label class="form-check-label" for="cu8">Китайска</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="cu9">
+                                        <label class="form-check-label" for="cu9">Средиземноморска</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="cu10">
+                                        <label class="form-check-label" for="cu10">Сръбска</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="cu11">
+                                        <label class="form-check-label" for="cu11">Турска</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="cu12">
+                                        <label class="form-check-label" for="cu12">Японска</label>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- <h5 class="mt-2">Атрибути</h5> -->
+                        <button type="button" class="btn btn-warning rounded mt-4">Атрибути</button>
+                        <div class="scrollable-menu">
+                            <div class="btn-group-vertical ">
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="atr1">
+                                        <label class="form-check-label" for="atr1">Бургер</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="atr2">
+                                        <label class="form-check-label" for="atr2">Месо</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="atr3">
+                                        <label class="form-check-label" for="atr3">Нудъли</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="atr4">
+                                        <label class="form-check-label" for="atr4">Ориз</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="atr5">
+                                        <label class="form-check-label" for="atr5">Пица</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="atr6">
+                                        <label class="form-check-label" for="atr6">Риба</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="atr7">
+                                        <label class="form-check-label" for="atr7">Салата</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="atr8">
+                                        <label class="form-check-label" for="atr8">Сандвичи</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="atr9">
+                                        <label class="form-check-label" for="atr9">Спагети</label>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-light btn-outline-success">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="atr10">
+                                        <label class="form-check-label" for="atr10">Суши</label>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="row">
+                    <div class="card-deck mt-2">
+                        <div class="card my-2">
+                            <img src="img/images.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Мусака</h5>
+                                <p class="card-text">Ресторант, адрес</p>
+                                <p class="card-text"><a href="review_user.html" class="stretched-link text-success">>Ревю</a></p>
+                            </div>
+                        </div>
+                        <div class="card my-2">
+                            <img src="img/images.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Мусака</h5>
+                                <p class="card-text">Ресторант, адрес</p>
+                                <p class="card-text"><a href="review_user.html" class="stretched-link text-success">>Ревю</a></p>
+                            </div>
+                        </div>
+                        <div class="card my-2">
+                            <img src="img/images.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Мусака</h5>
+                                <p class="card-text">Ресторант, адрес</p>
+                                <p class="card-text"><a href="review_user.html" class="stretched-link text-success">>Ревю</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card-deck">
+                        <div class="card my-2">
+                            <img src="img/images.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Мусака</h5>
+                                <p class="card-text">Ресторант, адрес</p>
+                                <p class="card-text"><a href="review_user.html" class="stretched-link text-success">>Ревю</a></p>
+                            </div>
+                        </div>
+                        <div class="card my-2">
+                            <img src="img/images.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Мусака</h5>
+                                <p class="card-text">Ресторант, адрес</p>
+                                <p class="card-text"><a href="review_user.html" class="stretched-link text-success">>Ревю</a></p>
+                            </div>
+                        </div>
+                        <div class="card my-2">
+                            <img src="img/images.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Мусака</h5>
+                                <p class="card-text">Ресторант, адрес</p>
+                                <p class="card-text"><a href="review_user.html" class="stretched-link text-success">>Ревю</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card-deck">
+                        <div class="card my-2">
+                            <img src="img/images.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Мусака</h5>
+                                <p class="card-text">Ресторант, адрес</p>
+                                <p class="card-text"><a href="review_user.html" class="stretched-link text-success">>Ревю</a></p>
+                            </div>
+                        </div>
+                        <div class="card my-2">
+                            <img src="img/images.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Мусака</h5>
+                                <p class="card-text">Ресторант, адрес</p>
+                                <p class="card-text"><a href="review_user.html" class="stretched-link text-success">>Ревю</a></p>
+                            </div>
+                        </div>
+                        <div class="card my-2">
+                            <img src="img/images.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Мусака</h5>
+                                <p class="card-text">Ресторант, адрес</p>
+                                <p class="card-text"><a href="review_user.html" class="stretched-link text-success">>Ревю</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer pt-4 mt-4">
+        <hr class="border-success">
+        <!-- Footer Links -->
+        <div class="footer-bg">
+            <div class="container text-center text-md-left">
+            </div>
+        </div>
+        <hr class="border-success">
+        <ul class="list-unstyled list-inline text-center py-2">
+        </ul>
+        <hr class="border-success">
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        </div>
+    </footer>
+    <!-- Footer -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="login/pop-up.js"></script>
+    <script src="register/pop-up.js"></script>
+    <script src="register/validate.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

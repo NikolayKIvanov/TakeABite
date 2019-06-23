@@ -1,0 +1,64 @@
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+    width: 100%;
+    text-align: left;
+}
+.sidemenu {
+    width: 95%;
+}
+
+.btn-group {
+    width: 102%;
+}
+
+.btn-group-vertical {
+    width: 100%;
+}
+
+.btn {
+    text-align: left;  
+}
+
+.breadcrumb {
+    background-color: white;
+    margin-bottom: 0rem;
+    width: 100%;
+    padding-left: 0rem;
+}
+
+.card-deck .card {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.dropdown {
+    padding: 0%;
+}
+
+.footer {
+    background-color: #ffc107;
+}
+
+.footer-bg {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+}
+
+hr {
+    margin: 0px;
+}
+
+.stretched-link::after {
+    position: unset;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: rgba(0,0,0,0);
+}
